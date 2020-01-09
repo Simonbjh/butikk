@@ -48,7 +48,7 @@ db-table {
 
 #login {
   border: solid gray 1px;
-  background-color: lightskyblue;
+  background-color: rgb(34, 220, 233);
   position: absolute;
   min-width: 22em;
   min-height: 8em;

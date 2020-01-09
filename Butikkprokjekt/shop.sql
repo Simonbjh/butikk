@@ -3,9 +3,12 @@
 -- english names would be customer,product,order,detail
 
 -- create role,database for demo
-create role shop password '123';     -- shop is user
-alter role shop with login;          -- allow login
-create database shop owner shop;     -- create db
+
+create role sjef password '123';              -- shop is user
+alter role sjef with login;                          -- allow login
+create database shop owner sjef ;                     -- create db
+
+
 
 -- enter the new db
 \c shop;
@@ -65,7 +68,8 @@ ALTER TABLE  linje  ADD FOREIGN KEY ( bestillingid ) REFERENCES  bestilling  ( b
 ALTER TABLE  linje  ADD FOREIGN KEY ( vareid ) REFERENCES  vare  ( vareid );
 ALTER TABLE  kunde  ADD FOREIGN KEY ( userid ) REFERENCES  users  ( userid );
 
-alter table bestilling owner to shop;
-alter table vare owner to shop;
-alter table kunde owner to shop;
-alter table linje owner to shop;
+alter table bestilling owner to sjef;
+alter table vare owner to sjef;
+alter table kunde owner to sjef;
+alter table linje owner to sjef;
+alter table users owner to sjef;
