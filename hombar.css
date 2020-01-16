@@ -1,0 +1,103 @@
+
+            #home {
+                display: grid;
+                align-items: center;
+                grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+                height: 70px;
+                background-color: #666666;
+                color: #fff;
+                width: 100vw;
+            }
+
+            div#menu {
+              place-self:center left;
+              width: 180px;
+            }
+
+            div#menu ul,
+            div#info > ul {
+              text-align: left;
+              text-transform: capitalize;
+              visibility: hidden;
+              list-style: none;
+              margin: 0;
+              padding: 5px;
+              z-index:100;
+              position: relative;
+              top:-0px;
+              color: black;
+              background-color: rgb(245, 245, 245);
+              box-shadow: 2px 2px 2px gray;
+              border: solid gray 1px;
+              border-radius: 4px;
+              padding: 5px;
+            
+            }
+
+
+            div#categories {
+                display: grid;
+                align-items: center;
+                grid-template-columns: 3fr 3fr 3fr 3fr 3fr;
+                height: 70px;
+                background-color: #666666;
+                color: #fff;
+                width: 100vw;
+            }
+
+            div#menu:focus-within ul,
+            div#menu:hover ul,
+            div#info:hover > ul {
+               visibility: visible;
+            }
+
+            ::slotted(li:focus),
+            ::slotted(li:hover),
+            div#menu slot:hover,
+            div#menu ul li:hover,
+            div#info > ul > li:hover {
+              background: rgb(32,166,231);
+            }
+
+            div#info li, div#menu li {
+              padding: 2px;
+            }
+
+            #home > div {
+                font-size: 1.2em;
+                height: 32px;
+                padding: 5px;
+                text-align: center;
+                white-space: nowrap;
+            }
+            div#heading {
+                font-size: 1.5em;
+                white-space: nowrap;
+                margin-left: 2em;
+            }
+            #home i.material-icons {
+              font-size: 32px;
+            }
+            @media not (screen and (-webkit-device-pixel-ratio: 1)) {
+              #username , #info, #crumb { display:none; }
+              #home {grid-template-columns: 1fr 1fr 3fr;}
+            }
+            @media screen and (max-width: 750px) {
+              #username , #info { display:none; }
+              #home {grid-template-columns: 1fr  1fr 3fr;}
+            }
+            @media screen and (max-width: 550px) {
+              #username , #info, #crumb { display:none; }
+              #home {grid-template-columns: 1fr 2fr; }
+            }
+
+
+            #data{
+                
+            }
+
+            #mobil{}
+
+            #music{}
+
+            #tv{}
