@@ -2,7 +2,7 @@
             #home {
                 display: grid;
                 align-items: center;
-                grid-template-columns: 1fr 1fr 2fr 3fr 1fr;
+                grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
                 height: 70px;
                 background-color: #666666;
                 color: #fff;
@@ -32,6 +32,17 @@
               border-radius: 4px;
               padding: 5px;
             
+            }
+
+
+            div#categories {
+                display: grid;
+                align-items: center;
+                grid-template-columns: 3fr 3fr 3fr 3fr 3fr;
+                height: 70px;
+                background-color: #666666;
+                color: #fff;
+                width: 100vw;
             }
 
             div#menu:focus-within ul,
@@ -79,3 +90,14 @@
               #username , #info, #crumb { display:none; }
               #home {grid-template-columns: 1fr 2fr; }
             }
+
+
+            #data{
+                
+            }
+
+            #mobil{}
+
+            #music{}
+
+            #tv{}

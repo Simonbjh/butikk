@@ -10,17 +10,28 @@
 <body>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <div id="home">
-          <div id="heading">${heading}</div>
-          <div id="crumb">${crumb}</div>
-          <div id="username">${username}</div>
-          <div id="info">${datestr}</div>
-          <div id="menu" tabindex="0">
+            <div id="logo">logo</div>
+            <div id="heading">${heading}</div>
+            <div id="username">${username}</div>
+            <div id="info">${datestr}</div>
+            <div id="menu" tabindex="0">
                 <i class="material-icons">menu</i>
                 <ul>
                   <li data-link="/index">Home</li>
                   <slot><li>simple menu</li></slot>
                 </ul>
             </div>
+        </div>
+        <br>
+        <div id="categories">
+            <div id="data">data</div>
+            <div id="mobil">mobil</div>
+            <div id="tv">tv</div>
+            <div id="music">musikk</div>
+
+
+
+
         </div>
 </body>
 </html>
