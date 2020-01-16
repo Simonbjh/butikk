@@ -45,7 +45,15 @@ CREATE TABLE kunde (
 CREATE TABLE  vare  (
    vareid  SERIAL PRIMARY KEY,
    navn  text NOT NULL,
-   pris  int NOT NULL
+   erkategori boolean,
+   pris  int NOT NULL,
+   kategoriid int
+);
+
+-- kategori
+CREATE TABLE  kategori  (
+   kategoriid  SERIAL PRIMARY KEY,
+   navn  text NOT NULL
 );
 
 -- order
@@ -67,6 +75,7 @@ ALTER TABLE  bestilling  ADD FOREIGN KEY ( kundeid ) REFERENCES  kunde  ( kundei
 ALTER TABLE  linje  ADD FOREIGN KEY ( bestillingid ) REFERENCES  bestilling  ( bestillingid );
 ALTER TABLE  linje  ADD FOREIGN KEY ( vareid ) REFERENCES  vare  ( vareid );
 ALTER TABLE  kunde  ADD FOREIGN KEY ( userid ) REFERENCES  users  ( userid );
+ALTER TABLE  vare  ADD FOREIGN KEY ( kategoriid ) REFERENCES  kategori  ( kategoriid );
 
 alter table bestilling owner to sjef;
 alter table vare owner to sjef;
