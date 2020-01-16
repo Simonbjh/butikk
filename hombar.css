@@ -2,7 +2,7 @@
             #home {
                 display: grid;
                 align-items: center;
-                grid-template-columns: 3fr 1fr 1fr 1fr 2fr;
+                grid-template-columns: 3fr 3fr 3fr 3fr 2fr;
                 height: 80px;
                 background-color: #666666;
                 color: #fff;
