@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="hombar.css">
+</head>
+<body>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <div id="home">
+          <div id="heading">${heading}</div>
+          <div id="crumb">${crumb}</div>
+          <div id="username">${username}</div>
+          <div id="info">${datestr}</div>
+          <div id="menu" tabindex="0">
+                <i class="material-icons">menu</i>
+                <ul>
+                  <li data-link="/index">Home</li>
+                  <slot><li>simple menu</li></slot>
+                </ul>
+            </div>
+        </div>
+</body>
+</html>
