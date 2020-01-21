@@ -10,7 +10,7 @@
 <body>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <div id="home">
-            <div id="logo"><img src="sj.png" alt=""></div>
+            <div id="logo"><img src="sj.png" alt="logo"></div>
             <div id="heading">${heading}</div>
             <div id="username">${username}</div>
             <div id="info">${datestr}</div>
@@ -22,16 +22,20 @@
                 </ul>
             </div>
         </div>
-        <img class="mySlides" src="iphone.jpg">
-        <img class="mySlides" src="macbook.jpg">
-        <img class="mySlides" src="iphone.jpg">
-        <img class="mySlides" src="macbook.jpg">
-        <div id="categories">
-            <div id="data">data</div>
-            <div id="mobil">mobil</div>
-            <div id="tv">tv</div>
-            <div id="music">musikk</div>
+        <div id="slideshow">
+            <img class="mySlides" src="iphone.jpg">
+            <img class="mySlides" src="macbook.jpg">
+            <img class="mySlides" src="iphone.jpg">
+            <img class="mySlides" src="macbook.jpg">
         </div>
+        
+        <div id="categories">
+            <div id="data" class="kat">data</div>
+            <div id="mobil" class="kat">mobil</div>
+            <div id="tv" class="kat">tv</div>
+            <div id="music" class="kat">musikk</div>
+        </div>
+        
         <script>
             var slideIndex = 0;
             carousel();

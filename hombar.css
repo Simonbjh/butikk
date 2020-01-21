@@ -2,11 +2,12 @@
             #home {
                 display: grid;
                 align-items: center;
-                grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
-                height: 70px;
+                grid-template-columns: 3fr 3fr 3fr 3fr 2fr;
+                height: 80px;
                 background-color: #666666;
                 color: #fff;
                 width: 100vw;
+                top: 0vh;
             }
 
             div#menu {
@@ -38,11 +39,14 @@
             div#categories {
                 display: grid;
                 align-items: center;
-                grid-template-columns: 3fr 3fr 3fr 3fr 3fr;
+                grid-template-columns: 3fr 3fr 3fr 3fr;
                 height: 70px;
                 background-color: #666666;
                 color: #fff;
                 width: 100vw;
+            }
+            .class {
+                border: solid 2px black;
             }
 
             div#menu:focus-within ul,
@@ -102,4 +106,21 @@
 
             #tv{}
 
+            #logo img{
+                height: 65px;
+                position: relative;
+            }
+            #logo{
+                position: absolute;
+                padding-right: 5vw;
+            }
         
+           img.mySlides{
+                height: 450px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .kat{
+                padding-left: 10vw;
+            }
