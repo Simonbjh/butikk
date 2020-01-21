@@ -140,7 +140,7 @@ main > article {
 #top,
 #bot {
   text-align: center;
-  color: rgb(17, 17, 141);
+  color: rgb(61, 61, 153);
 }
 #top {
   grid-area: top;
