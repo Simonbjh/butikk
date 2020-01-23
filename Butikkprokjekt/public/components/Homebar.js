@@ -10,8 +10,12 @@ class HomeBar extends HTMLElement {
     let datestr = now.toDateString();
     this._root = this.attachShadow({ mode: "open" });
     this._root.innerHTML = `
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <div id="home">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <div id="home">
+        <div id="logo"><img src="sj.png" alt="logo"></div>
+        <div id="heading">${heading}</div>
+        <div id="username">${username}</div>
+        <div id="info">${datestr}</div>
         <div id="menu" tabindex="0">
             <i class="material-icons">menu</i>
             <ul>
@@ -19,92 +23,147 @@ class HomeBar extends HTMLElement {
               <slot><li>simple menu</li></slot>
             </ul>
         </div>
-        <div id="heading">${heading}</div>
-        <div id="crumb">${crumb}</div>
-        <div id="username">${username}</div>
-        <div id="info">${datestr}</div>
+    </div>
+    <div id="slideshow">
+        <img class="mySlides" src="iphone.jpg">
+        <img class="mySlides" src="macbook.jpg">
+        <img class="mySlides" src="iphone.jpg">
+        <img class="mySlides" src="macbook.jpg">
+    </div>
+    
+    <div id="categories">
+        <div id="data" class="kat">data</div>
+        <div id="mobil" class="kat">mobil</div>
+        <div id="tv" class="kat">tv</div>
+        <div id="music" class="kat">musikk</div>
+    </div>
       </div>
           <style>
-            #home {
-                display: grid;
-                align-items: center;
-                grid-template-columns: 1fr 1fr 2fr 3fr 1fr;
-                height: 70px;
-                background-color: #666;
-                background-image: var(--grad, linear-gradient(180deg,#20a8e9,rgba(30,158,220,.5)) );
-                color: #fff;
-            }
+          #home {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 5fr 4fr 4fr 1fr;
+            height: 80px;
+            background-color: #666666;
+            color: #fff;
+            width: 100vw;
+            top: 0vh;
+        }
 
-            div#menu {
-              place-self:center left;
-              width: 180px;
-            }
+        div#menu {
+          place-self:center left;
+          width: 180px;
+        }
 
-            div#menu ul,
-            div#info > ul {
-              text-align: left;
-              text-transform: capitalize;
-              visibility: hidden;
-              list-style: none;
-              margin: 0;
-              padding: 5px;
-              z-index:100;
-              position: relative;
-              top:-0px;
-              color: black;
-              background-color: rgb(245, 245, 245);
-              box-shadow: 2px 2px 2px gray;
-              border: solid gray 1px;
-              border-radius: 4px;
-              padding: 5px;
-            
-            }
+        div#menu ul,
+        div#info > ul {
+          text-align: left;
+          text-transform: capitalize;
+          visibility: hidden;
+          list-style: none;
+          margin: 0;
+          padding: 5px;
+          z-index:100;
+          position: relative;
+          top:-0px;
+          color: black;
+          background-color: rgb(245, 245, 245);
+          box-shadow: 2px 2px 2px gray;
+          border: solid gray 1px;
+          border-radius: 4px;
+          padding: 5px;
+        
+        }
 
-            div#menu:focus-within ul,
-            div#menu:hover ul,
-            div#info:hover > ul {
-               visibility: visible;
-            }
 
-            ::slotted(li:focus),
-            ::slotted(li:hover),
-            div#menu slot:hover,
-            div#menu ul li:hover,
-            div#info > ul > li:hover {
-              background: rgb(32,166,231);
-            }
+        div#categories {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            height: 70px;
+            background-color: #666666;
+            color: #fff;
+            width: 100vw;
+        }
+        .class {
+            border: solid 2px black;
+        }
 
-            div#info li, div#menu li {
-              padding: 2px;
-            }
+        div#menu:focus-within ul,
+        div#menu:hover ul,
+        div#info:hover > ul {
+           visibility: visible;
+        }
 
-            #home > div {
-                font-size: 1.2em;
-                height: 32px;
-                padding: 5px;
-                text-align: center;
-                white-space: nowrap;
-            }
-            div#heading {
-                font-size: 1.5em;
-                white-space: nowrap;
-                margin-left: 2em;
-            }
-            #home i.material-icons {
-              font-size: 32px;
-            }
-            @media not (screen and (-webkit-device-pixel-ratio: 1)) {
-              #username , #info, #crumb { display:none; }
-              #home {grid-template-columns: 1fr 1fr 3fr;}
-            }
-            @media screen and (max-width: 750px) {
-              #username , #info { display:none; }
-              #home {grid-template-columns: 1fr  1fr 3fr;}
-            }
-            @media screen and (max-width: 550px) {
-              #username , #info, #crumb { display:none; }
-              #home {grid-template-columns: 1fr 2fr; }
-            }
+        ::slotted(li:focus),
+        ::slotted(li:hover),
+        div#menu slot:hover,
+        div#menu ul li:hover,
+        div#info > ul > li:hover {
+          background: rgb(32,166,231);
+        }
+
+        div#info li, div#menu li {
+          padding: 2px;
+        }
+
+        #home > div {
+            font-size: 1.2em;
+            height: 32px;
+            padding: 5px;
+            text-align: center;
+            white-space: nowrap;
+        }
+        div#heading {
+            font-size: 1.5em;
+            white-space: nowrap;
+            margin-left: 2em;
+        }
+        #home i.material-icons {
+          font-size: 32px;
+        }
+        @media not (screen and (-webkit-device-pixel-ratio: 1)) {
+          #username , #info, #crumb { display:none; }
+          #home {grid-template-columns: 1fr 1fr 3fr;}
+        }
+        @media screen and (max-width: 750px) {
+          #username , #info { display:none; }
+          #home {grid-template-columns: 1fr  1fr 3fr;}
+        }
+        @media screen and (max-width: 550px) {
+          #username , #info, #crumb { display:none; }
+          #home {grid-template-columns: 1fr 2fr; }
+        }
+
+
+        #data{
+
+        }
+
+        #mobil{}
+
+        #music{}
+
+        #tv{}
+
+        #logo img{
+            height: 65px;
+            position: relative;
+        }
+        #logo{
+            position: absolute;
+            padding-right: 5vw;
+        }
+    
+       img.mySlides{
+            height: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .kat{
+            padding-left: 10vw;
+        }
           </style>
         `;
 
