@@ -25,7 +25,7 @@
                 sql="select v.*, k.navn as gruppe from vare v 
                     left join vare k on (v.kategori = k.vareid) 
                     where v.erkategori='t' order by k.navn,v.navn">
-                <span slot="caption">Kategorier</span>
+                <span slot="caption">Vare kategorier</span>
             </db-table>
         </div>
         <div class="table">
@@ -40,7 +40,7 @@
         </div>
        
         <db-insert class="table" id="form" fields="navn,pris:number,erkategori:checkbox" table="vare">
-            <span slot="heading">Registrer Vare</span>
+            <span slot="heading">Registrer en vare</span>
             <db-foreign label="kategori" field="kategori" foreign="vareid:kategori" table="vare"
                 sql="select vareid,navn as kategori from vare where erkategori = 't'">
             </db-foreign>

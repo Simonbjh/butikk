@@ -1,0 +1,53 @@
+img.mySlides{
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+
+
+#bottom {
+    background-color: darkslategray;
+    position: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 0%;
+
+}
+
+#slideshow{
+    background-color: white;
+    
+}
+
+#content{
+    width: 100%;
+    background-color: white;
+    position: relative;
+    border: solid 1px black;
+}
+
+body{
+    background-color: #666;
+}
+
+
+div#categories {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    height: 70px;
+    background-color: #666666;
+    color: #fff;
+    width: 100vw;
+    
+}
+
+.kat{
+    padding-left: 10vw;
+}
+
+
+#bottom {
+    border: solid 1px black;
+}

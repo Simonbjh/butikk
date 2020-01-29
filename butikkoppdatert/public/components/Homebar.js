@@ -15,11 +15,11 @@ class HomeBar extends HTMLElement {
         <div id="menu" tabindex="0">
             <i class="material-icons">menu</i>
             <ul>
-              <li data-link="/index">Home</li>
+              <li data-link="/index">Hjem</li>
               <slot><li>simple menu</li></slot>
             </ul>
         </div>
-        <div id="heading">${heading}</div>
+        <div id="heading">${heading}HEI</div>
         <div id="crumb">${crumb}</div>
         <div id="username">${username}</div>
         <div id="info">${datestr}</div>
@@ -29,9 +29,8 @@ class HomeBar extends HTMLElement {
                 display: grid;
                 align-items: center;
                 grid-template-columns: 1fr 1fr 2fr 3fr 1fr;
-                height: 70px;
-                background-color: rgba(32,166,231,.8);
-                background-image: var(--grad, linear-gradient(180deg,#20a8e9,rgba(30,158,220,.5)) );
+                height: 50px;
+                background-color: #666;
                 color: #fff;
             }
 
@@ -52,9 +51,9 @@ class HomeBar extends HTMLElement {
               position: relative;
               top:-0px;
               color: black;
-              background-color: rgb(245, 245, 245);
+              background-color: lightgray;
               box-shadow: 2px 2px 2px gray;
-              border: solid gray 1px;
+              border: solid darkgreen 3px;
               border-radius: 4px;
               padding: 5px;
             }

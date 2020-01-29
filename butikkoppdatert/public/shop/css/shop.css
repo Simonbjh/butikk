@@ -48,13 +48,13 @@ db-table {
 
 #login {
   border: solid gray 1px;
-  background-color: lightgrey;
+  background-color: lightblue;
   position: absolute;
-  min-width: 22em;
-  min-height: 8em;
+  min-width: 25em;
+  min-height: 10em;
   padding: 2em;
   border-radius: 12px;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -81,17 +81,6 @@ db-table {
   box-shadow: red inset 0 0 2px;
 }
 
-main {
-  width: calc(100vw - 200px);
-  max-width: 60em;
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  grid-template-areas:
-    " top top top "
-    "left center right"
-    " bot bot bot ";
-}
 
 @media screen and (max-width: 810px) {
   main {
