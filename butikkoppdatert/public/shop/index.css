@@ -45,9 +45,60 @@ div#categories {
 
 .kat{
     padding-left: 10vw;
+    font-size: 20px;
+    font-family: sans-serif;
 }
 
 
 #bottom {
     border: solid 1px black;
+}
+
+
+img.bilder {
+    background-color: white;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;  
+    border: solid 1px black;
+}
+
+#bilder img {
+    display: block;
+    width: 550px;
+}
+
+#bilder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em;
+    position: right;
+    
+
+    grid-gap: 40px;
+    
+}
+
+#bilder div{
+    text-align: center;
+    color: black;
+    padding: 95px;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: right 50px;
+}
+
+#info{
+    background-color: white;
+    border: solid 1px black;
+}
+
+#info h1{
+    text-align: center;
+    text-size-adjust: 30px;
+    font-family: sans-serif;
+    padding: 20px;
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registrer bok</title>
+    <title>Kunde</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="/components/DbInsert.js"></script>
     <script src="/components/DbUpdate.js"></script>
@@ -22,7 +22,7 @@
         <div class="table">
             <db-table id="table" update="kunde" fields="kundeid:hidden,fornavn,etternavn,adresse,epost,kjonn,tlf" delete="kunde"
                 sql="select * from kunde">
-                <span slot="caption">Kunder</span>
+                <span slot="caption">Liste over kunder</span>
             </db-table>
         </div>
 

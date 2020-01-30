@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registrer bok</title>
+    <title>Kategori</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="/components/DbInsert.js"></script>
     <script src="/components/DbForeign.js"></script>
@@ -24,12 +24,12 @@
                 fields="kategori" 
                 delete="kategori" update="kategori"  
                 sql="select kategori from kategori">
-                <span slot="caption">Kategoriene</span>
+                <span slot="caption">Kategori liste</span>
             </db-table>
         </div>
        
         <db-insert class="table" id="form" fields="kategori" table="kategori">
-            <span slot="heading">Registrer Kategori</span>
+            <span slot="heading">Registrer en kategori</span>
         </db-insert>
     </div>
 </body>

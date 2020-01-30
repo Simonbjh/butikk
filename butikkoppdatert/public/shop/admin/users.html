@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registrer bok</title>
+    <title>Brukere</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="/components/DbInsert.js"></script>
     <script src="/components/DbTable.js"></script>
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/shop.css">
     <style>
      db-table {
-       --tsize: 32em;
+       --tsize: 29em;
      }
     </style>
 </head>
@@ -25,15 +25,15 @@
        
         <form id="login" action="/makeuser"  method="post">
             <div>
-                <label>Username:</label>
+                <label>Brukernavn:</label>
                 <input id="username" type="text" placeholder="un" name="username" /><br />
             </div>
             <div>
-                <label>Role:</label>
+                <label>Rolle:</label>
                 <input id="role" type="text" placeholder="ro" name="role" /><br />
             </div>
             <div>
-                <label>Password:</label>
+                <label>Passord:</label>
                 <input id="password" type="password" placeholder="pw" name="password" />
             </div>
             <div>
@@ -45,7 +45,7 @@
         <db-table id="table" update="users"  
             fields="userid:hidden,username,role,password" delete="users"
             sql="select * from users">
-            <span slot="caption">Users</span>
+            <span slot="caption">Liste over brukere</span>
         </db-table>
     </div>
 </body>
